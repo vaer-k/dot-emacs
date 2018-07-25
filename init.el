@@ -34,12 +34,8 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(;; makes handling lisp expressions much, much easier
-    ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
+  '(
     paredit
-
-    ;; key bindings and code colorization for Clojure
-    ;; https://github.com/clojure-emacs/clojure-mode
     clojure-mode
 
     ;; extra syntax highlighting for clojure
@@ -67,8 +63,7 @@
     exec-path-from-shell
     ivy
     counsel
-
-    ;; git integration
+    neotree
     magit))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -150,7 +145,7 @@
  '(fci-rule-color "#2a2a2a")
  '(package-selected-packages
    (quote
-    (counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
