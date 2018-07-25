@@ -34,6 +34,13 @@
 ;; projectile everywhere!
 (projectile-global-mode)
 
+;; Neotree
+(add-to-list 'load-path "/some/path/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+;; For customization of neotree theme see:
+;; https://github.com/jaypei/emacs-neotree#theme-config
+
 ;; Ivy
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
