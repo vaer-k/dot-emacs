@@ -37,9 +37,9 @@
 ;; Neotree
 (add-to-list 'load-path "/some/path/neotree")
 (require 'neotree)
+(require 'all-the-icons)
 (global-set-key [f8] 'neotree-toggle)
-;; For customization of neotree theme see:
-;; https://github.com/jaypei/emacs-neotree#theme-config
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;; Ivy
 (ivy-mode 1)

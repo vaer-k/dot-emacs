@@ -145,7 +145,7 @@
  '(fci-rule-color "#2a2a2a")
  '(package-selected-packages
    (quote
-    (neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
