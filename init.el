@@ -64,8 +64,9 @@
     tagedit
 
     spacemacs-theme
-    ivy
     exec-path-from-shell
+    ivy
+    counsel
 
     ;; git integration
     magit))
@@ -149,7 +150,7 @@
  '(fci-rule-color "#2a2a2a")
  '(package-selected-packages
    (quote
-    (spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
