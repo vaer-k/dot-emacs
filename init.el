@@ -59,6 +59,8 @@
     ;; edit html tags like sexps
     tagedit
 
+    better-defaults
+    elpy
     spacemacs-theme
     exec-path-from-shell
     ivy
@@ -99,6 +101,7 @@
 ;;;;
 ;; Customization
 ;;;;
+(require 'better-defaults)
 
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
@@ -127,6 +130,7 @@
 
 ;; Langauage-specific
 (load "setup-clojure.el")
+(load "setup-python.el")
 (load "setup-js.el")
 
 (custom-set-variables
@@ -145,7 +149,7 @@
  '(fci-rule-color "#2a2a2a")
  '(package-selected-packages
    (quote
-    (which-key all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (elpy better-defaults which-key all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
