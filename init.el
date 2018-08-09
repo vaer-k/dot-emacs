@@ -4,12 +4,16 @@
 
 ;; Define package repositories
 (require 'package)
-(setq package-archives '(("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("tromey" . "http://tromey.com/elpa/")
+(setq package-archives '(("melpa-stable" . "http://stable.melpa.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")
-                         ("melpa-stable" . "http://stable.melpa.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("tromey" . "http://tromey.com/elpa/")
                          ))
-(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+
+(setq package-pinned-packages '(
+                                (cider . "melpa-stable")
+                                (ensime . "melpa-stable")
+                                ))
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -37,6 +41,7 @@
     tagedit
     better-defaults
     elpy
+    ensime
     iedit
     spacemacs-theme
     exec-path-from-shell
@@ -109,6 +114,7 @@
 (load "setup-clojure.el")
 (load "setup-python.el")
 (load "setup-js.el")
+(load "setup-scala.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -126,7 +132,7 @@
  '(fci-rule-color "#2a2a2a")
  '(package-selected-packages
    (quote
-    (iedit elpy better-defaults which-key all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (ensime iedit elpy better-defaults which-key all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
