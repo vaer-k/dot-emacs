@@ -11,8 +11,7 @@
                          ("tromey" . "http://tromey.com/elpa/")
                          ))
 
-(setq package-pinned-packages '(
-                                (cider . "melpa-stable")
+(setq package-pinned-packages '((cider . "melpa-stable")
                                 (ensime . "melpa-stable")
                                 ))
 
@@ -113,11 +112,10 @@
 (load "elisp-editing.el")
 
 ;; Langauage-specific
-(load "setup-clojure.el")
-(load "setup-python.el")
-(load "setup-js.el")
-(load "setup-scala.el")
-(load "setup-haskell.el")
+;; Requires companion setup file in .emacs.d/customizations
+(defvar langs '("clojure" "python" "js" "scala" "haskell"))
+(dolist (l langs)
+  (load (concat "setup-" l ".el")))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
