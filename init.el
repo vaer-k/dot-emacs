@@ -4,20 +4,12 @@
 
 ;; Define package repositories
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-             '("tromey" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)   
+(setq package-archives '(("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("tromey" . "http://tromey.com/elpa/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")
+                         ("melpa-stable" . "http://stable.melpa.org/packages/")
+                         ))
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
-
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
-
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -37,28 +29,12 @@
   '(
     paredit
     clojure-mode
-
-    ;; extra syntax highlighting for clojure
     clojure-mode-extra-font-locking
-
-    ;; integration with a Clojure REPL
-    ;; https://github.com/clojure-emacs/cider
     cider
-
-    ;; Enhances M-x to allow easier execution of commands. Provides
-    ;; a filterable list of possible commands in the minibuffer
-    ;; http://www.emacswiki.org/emacs/Smex
     smex
-
-    ;; project navigation
     projectile
-
-    ;; colorful parenthesis matching
     rainbow-delimiters
-
-    ;; edit html tags like sexps
     tagedit
-
     better-defaults
     elpy
     iedit

@@ -3,5 +3,7 @@
 ;; It appears this issue will be resolved in an upcoming version of emacs or elpy
 ;; https://github.com/jorgenschaefer/elpy/issues/887
 (setq python-shell-completion-native-enable nil)
+
+(setq python-shell-interpreter "python3.7")
 (elpy-enable)
 
