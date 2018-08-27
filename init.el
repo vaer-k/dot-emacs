@@ -106,7 +106,7 @@
 (load "editing.el")
 
 ;; Hard-to-categorize customizations
-(load "misc.el")
+(load "misc-personal.el")
 
 ;; For editing lisps
 (load "elisp-editing.el")
