@@ -51,6 +51,8 @@
     haskell-mode
     ensime
     iedit
+    which-key
+    package-install
     spacemacs-theme
     exec-path-from-shell
     ivy
@@ -71,7 +73,7 @@
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
-    (use-package p :ensure t)))
+    (package-install p)))
 
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
