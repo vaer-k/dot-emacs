@@ -4,18 +4,19 @@
 
 ;; Define package repositories
 (require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa-stable" . "http://stable.melpa.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("tromey" . "http://tromey.com/elpa/")
-                         ))
+(setq
+ package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                    ("org" . "http://orgmode.org/elpa/")
+                    ("melpa" . "http://melpa.org/packages/")
+                    ("melpa-stable" . "https://stable.melpa.org/packages/")
+                    ("marmalade" . "http://marmalade-repo.org/packages/")
+                    ("tromey" . "http://tromey.com/elpa/"))
+ package-archive-priorities '(("melpa-stable" . 1)))
 
 (setq package-pinned-packages '((cider . "melpa-stable")
-                                (ensime . "melpa-stable")
-                                ))
+                                (ensime . "melpa-stable")))
 
-;; Load and activate emacs packages. Do this first so that the
+;; LOAD and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
 (package-initialize)
@@ -24,13 +25,17 @@
 ;; This informs Emacs about the latest versions of all packages, and
 ;; makes them available for download.
 (when (not package-archive-contents)
-  (package-refresh-contents))
+  (package-refresh-contents)
+  (package-install 'use-package))
+(eval-when-compile
+  (require 'use-package))
 
 ;; The packages you want installed. You can also install these
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
   '(
+    better-defaults
     paredit
     clojure-mode
     clojure-mode-extra-font-locking
@@ -41,6 +46,8 @@
     tagedit
     better-defaults
     elpy
+    flycheck
+    py-autopep8
     haskell-mode
     ensime
     iedit
@@ -64,7 +71,7 @@
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
-    (package-install p)))
+    (use-package p :ensure t)))
 
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
@@ -84,7 +91,6 @@
 ;;;;
 ;; Customization
 ;;;;
-(require 'better-defaults)
 
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
@@ -113,7 +119,7 @@
 
 ;; Langauage-specific
 ;; Requires companion setup file in .emacs.d/customizations
-(defvar langs '("clojure" "python" "js" "scala" "haskell"))
+(defvar langs '("clojure" "python" "haskell"))
 (dolist (l langs)
   (load (concat "setup-" l ".el")))
 
@@ -131,9 +137,12 @@
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(fci-rule-color "#2a2a2a")
+ '(haskell-process-auto-import-loaded-modules t)
+ '(haskell-process-log t)
+ '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (haskell-mode ensime iedit elpy better-defaults which-key all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (py-autopep8 jedi haskell-mode ensime iedit elpy better-defaults which-key all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
