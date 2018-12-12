@@ -65,7 +65,7 @@
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
 
-(setq electric-indent-mode nil)
+(setq electric-indent-mode t)
 
 ;; Allows editing multiple occurrences of a word with C-;
 (require 'iedit)
