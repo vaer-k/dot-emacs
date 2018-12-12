@@ -51,7 +51,7 @@
 (use-package neotree :ensure t)                         
 (use-package which-key :ensure t)                       
 (use-package magit :ensure t)                           
-
+(use-package company-mode :ensure t)
 
 ;;;;
 ;; Customization
