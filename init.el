@@ -30,50 +30,29 @@
 (eval-when-compile
   (require 'use-package))
 
-;; The packages you want installed. You can also install these
-;; manually with M-x package-install
-;; Add in your own as you wish:
-(defvar my-packages
-  '(
-    better-defaults
-    paredit
-    clojure-mode
-    clojure-mode-extra-font-locking
-    cider
-    smex
-    projectile
-    rainbow-delimiters
-    tagedit
-    better-defaults
-    elpy
-    flycheck
-    py-autopep8
-    haskell-mode
-    ensime
-    iedit
-    which-key
-    package-install
-    spacemacs-theme
-    exec-path-from-shell
-    ivy
-    counsel
-    neotree
-    magit))
-
-;; On OS X, an Emacs instance started from the graphical user
-;; interface will have a different environment than a shell in a
-;; terminal window, because OS X does not run a shell during the
-;; login. Obviously this will lead to unexpected results when
-;; calling external utilities like make from Emacs.
-;; This library works around this problem by copying important
-;; environment variables from the user's shell.
-;; https://github.com/purcell/exec-path-from-shell
-(if (eq system-type 'darwin)
-    (add-to-list 'my-packages 'exec-path-from-shell))
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+(setq use-package-always-ensure t)
+(use-package paredit)
+(use-package clojure-mode)
+(use-package clojure-mode-extra-font-locking)
+(use-package cider)
+(use-package smex)
+(use-package projectile)
+(use-package rainbow-delimiters)
+(use-package tagedit)
+(use-package better-defaults)
+(use-package elpy)
+(use-package flycheck)
+(use-package py-autopep8)
+(use-package haskell-mode)
+(use-package ensime)
+(use-package iedit)
+(use-package spacemacs-theme :defer t)
+(use-package ivy)
+(use-package all-the-icons)
+(use-package counsel)
+(use-package neotree)
+(use-package which-key)
+(use-package magit)
 
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
@@ -87,7 +66,7 @@
 ;; 
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
-(add-to-list 'load-path "~/.emacs.d/vendor")
+;;(add-to-list 'load-path "~/.emacs.d/vendor")
 
 
 ;;;;
@@ -97,10 +76,6 @@
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
-
-;; Sets up exec-path-from-shell so that Emacs will use the correct
-;; environment variables
-(load "shell-integration.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
@@ -125,30 +100,3 @@
 (dolist (l langs)
   (load (concat "setup-" l ".el")))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default bold shadow italic underline bold bold-italic bold])
- '(ansi-color-names-vector
-   (vector "#eaeaea" "#d54e53" "#b9ca4a" "#e7c547" "#7aa6da" "#c397d8" "#70c0b1" "#000000"))
- '(coffee-tab-width 2)
- '(custom-safe-themes
-   (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
- '(fci-rule-color "#2a2a2a")
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t)
- '(package-selected-packages
-   (quote
-    (py-autopep8 jedi haskell-mode ensime iedit elpy better-defaults which-key all-the-icons neotree counsel spacemacs-theme tagedit smex rainbow-delimiters projectile paredit magit exec-path-from-shell clojure-mode-extra-font-locking cider))))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
