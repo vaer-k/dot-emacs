@@ -13,6 +13,11 @@
       python-shell-interpreter-args "-i --simple-prompt")
 (elpy-enable)
 
+;; Turn on electric local when elpy is active
+(add-hook 'elpy-mode-hook
+          (lambda ()
+            (electric-pair-local-mode)))
+
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
