@@ -50,7 +50,12 @@
 (use-package counsel :ensure t)                         
 (use-package neotree :ensure t)                         
 (use-package which-key :ensure t)                       
-(use-package magit :ensure t)                           
+(use-package magit :ensure t)
+(use-package hungry-delete
+  :ensure t
+  :bind ("C-c <backspace>" . 'hungry-delete-backward)
+  :bind ("C-c C-d" . 'hungry-delete-forward))
+
 
 ;;;;
 ;; Customization
