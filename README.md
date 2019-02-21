@@ -8,6 +8,7 @@
    where Emacs looks for configuration files, and deleting these files
    and directories will ensure that you start with a clean slate.
 3. Clone and rename dir to ~/.emacs.d`.
+4. For Python support, run `pip install jedi flake8 autopep8 yapf`
 
 Then open Emacs.
 
