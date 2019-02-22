@@ -9,6 +9,7 @@
    and directories will ensure that you start with a clean slate.
 3. Clone and rename dir to ~/.emacs.d`.
 4. For Python support, run `pip install jedi flake8 autopep8 yapf`
+5. `neotree` requires some special fonts: `M-x all-the-icons-install-fonts`. I have experienced an issue with this function where the fonts aren't properly downloaded. You may have to manually download those fonts. See this issue for more info: https://github.com/domtronn/all-the-icons.el/issues/134
 
 Then open Emacs.
 
