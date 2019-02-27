@@ -72,3 +72,7 @@
 ;; Allows editing multiple occurrences of a word with C-;
 (require 'iedit)
 
+;; Smooth scrolling
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+(setq smooth-scroll-margin 5)

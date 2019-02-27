@@ -27,7 +27,6 @@
 (projectile-global-mode)
 
 ;; Neotree
-(add-to-list 'load-path "/some/path/neotree")
 (require 'neotree)
 (require 'all-the-icons)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))

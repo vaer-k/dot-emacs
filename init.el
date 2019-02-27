@@ -46,9 +46,9 @@
 (use-package iedit :ensure t)                           
 (use-package spacemacs-theme :ensure t :defer t)
 (use-package ivy :ensure t)                             
-(use-package all-the-icons :ensure t)                   
 (use-package counsel :ensure t)                         
-(use-package neotree :ensure t)                         
+(use-package neotree :ensure t)
+(use-package all-the-icons :ensure t)                   
 (use-package which-key :ensure t)                       
 (use-package magit :ensure t)
 (use-package hungry-delete
@@ -87,3 +87,23 @@
 (defvar langs '("clojure" "python" "haskell"))
 (dolist (l langs)
   (load (concat "setup-" l ".el")))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(erc-modules
+   (quote
+    (autoaway hl-nicks completion netsplit fill button match track readonly networks ring autojoin noncommands irccontrols move-to-prompt stamp menu list)))
+ '(haskell-process-auto-import-loaded-modules t)
+ '(haskell-process-log t)
+ '(haskell-process-suggest-remove-import-lines t)
+ '(package-selected-packages
+   (quote
+    (smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
