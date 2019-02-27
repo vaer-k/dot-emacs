@@ -1,5 +1,4 @@
 ;; Customizations relating to editing a buffer.
-
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Key binding to use "hippie expand" for text autocompletion
@@ -51,7 +50,6 @@
 ;; (global-rainbow-delimiters-mode t)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-
 ;; use 2 spaces for tabs
 (defun die-tabs ()
   (interactive)
@@ -76,3 +74,5 @@
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
 (setq smooth-scroll-margin 5)
+
+(global-set-key (kbd "C-c <delete>") 'hungry-delete-forward)
