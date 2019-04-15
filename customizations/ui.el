@@ -68,3 +68,11 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+
+;; doom
+(load-theme 'doom-one t)
+(doom-modeline-mode 1)
+(doom-themes-neotree-config)
+(doom-themes-visual-bell-config)
+(doom-themes-org-config)

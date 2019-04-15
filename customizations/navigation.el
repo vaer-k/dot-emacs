@@ -43,6 +43,7 @@
               (neotree-find file-name)))
       (message "Could not find git project root."))))
 (global-set-key [f8] 'neotree-project-dir)
+(setq neo-autorefresh nil)
 
 ;; Ivy
 (ivy-mode 1)

@@ -44,7 +44,7 @@
 (use-package haskell-mode :ensure t)                    
 (use-package ensime :ensure t)                          
 (use-package iedit :ensure t)                           
-(use-package spacemacs-theme :ensure t :defer t)
+;; (use-package spacemacs-theme :ensure t :defer t)
 (use-package ivy :ensure t)                             
 (use-package counsel :ensure t)                         
 (use-package neotree :ensure t)
@@ -55,6 +55,10 @@
   :ensure t
   :bind ("C-c <backspace>" . 'hungry-delete-backward)
   :bind ("C-c C-d" . 'hungry-delete-forward))
+(use-package doom-themes :ensure t)
+(use-package doom-modeline :ensure t)
+(use-package alchemist)
+
 
 
 ;;;;
@@ -100,7 +104,7 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
+    (alchemist doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
