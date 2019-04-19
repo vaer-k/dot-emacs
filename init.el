@@ -51,6 +51,7 @@
 (use-package all-the-icons :ensure t)                   
 (use-package which-key :ensure t)                       
 (use-package magit :ensure t)
+(use-package smooth-scrolling :ensure t)
 (use-package hungry-delete
   :ensure t
   :bind ("C-c <backspace>" . 'hungry-delete-backward)
