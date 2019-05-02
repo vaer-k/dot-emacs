@@ -40,7 +40,8 @@
 (use-package better-defaults :ensure t)                 
 (use-package elpy :ensure t)                            
 (use-package flycheck :ensure t)                        
-(use-package py-autopep8 :ensure t)                     
+(use-package py-autopep8 :ensure t)
+(use-package blacken :ensure t)
 (use-package haskell-mode :ensure t)
 (use-package rjsx-mode :ensure t)
 (use-package ensime :ensure t)                          
@@ -105,7 +106,7 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (alchemist doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
+    (blacken alchemist doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
