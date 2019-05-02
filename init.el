@@ -41,10 +41,10 @@
 (use-package elpy :ensure t)                            
 (use-package flycheck :ensure t)                        
 (use-package py-autopep8 :ensure t)                     
-(use-package haskell-mode :ensure t)                    
+(use-package haskell-mode :ensure t)
+(use-package rjsx-mode :ensure t)
 (use-package ensime :ensure t)                          
 (use-package iedit :ensure t)                           
-;; (use-package spacemacs-theme :ensure t :defer t)
 (use-package ivy :ensure t)                             
 (use-package counsel :ensure t)                         
 (use-package neotree :ensure t)
@@ -89,7 +89,7 @@
 
 ;; Langauage-specific
 ;; Requires companion setup file in .emacs.d/customizations
-(defvar langs '("clojure" "python" "haskell"))
+(defvar langs '("clojure" "python" "haskell" "js"))
 (dolist (l langs)
   (load (concat "setup-" l ".el")))
 (custom-set-variables
