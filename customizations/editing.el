@@ -76,3 +76,5 @@
 (setq smooth-scroll-margin 5)
 
 (global-set-key (kbd "C-c <delete>") 'hungry-delete-forward)
+
+(set-face-attribute 'default nil :height 120)
