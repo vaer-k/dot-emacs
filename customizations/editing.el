@@ -77,4 +77,5 @@
 
 (global-set-key (kbd "C-c <delete>") 'hungry-delete-forward)
 
-(set-face-attribute 'default nil :height 120)
+;; Set default font size
+(set-face-attribute 'default nil :height 140)
