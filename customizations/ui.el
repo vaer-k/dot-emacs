@@ -68,7 +68,8 @@
 
 ;; Tranparency ------------------------------------------
 
-(add-to-list 'default-frame-alist '(alpha . (100 . 100)))
+;; Uncomment the following when window manager doesn't handle setting initial transparency
+;; (add-to-list 'default-frame-alist '(alpha . (100 . 100)))
 
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
 ;;(set-frame-parameter (selected-frame) 'alpha <both>)

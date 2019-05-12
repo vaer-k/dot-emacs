@@ -33,7 +33,8 @@
 (use-package paredit :ensure t)                         
 (use-package clojure-mode :ensure t)                    
 (use-package clojure-mode-extra-font-locking :ensure t) 
-(use-package cider :ensure t)                                                      
+(use-package cider :ensure t)
+(use-package unicode-fonts :ensure t)
 (use-package projectile :ensure t)                      
 (use-package rainbow-delimiters :ensure t)              
 (use-package tagedit :ensure t)                         
@@ -106,7 +107,7 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (blacken alchemist doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
+    (emojify unicode-fonts blacken alchemist doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

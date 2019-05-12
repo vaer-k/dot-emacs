@@ -79,3 +79,10 @@
 
 ;; Set default font size
 (set-face-attribute 'default nil :height 140)
+
+;; Handle unicode
+(require 'unicode-fonts)
+(unicode-fonts-setup)
+
+;; Display emoji
+(add-hook 'after-init-hook #'global-emojify-mode)
