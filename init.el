@@ -14,7 +14,8 @@
  package-archive-priorities '(("melpa-stable" . 1)))
 
 (setq package-pinned-packages '((cider . "melpa-stable")
-                                (ensime . "melpa-stable")))
+                                (ensime . "melpa-stable")
+                                (alchemist . "melpa")))
 
 ;; LOAD and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -59,8 +60,7 @@
   :bind ("C-c C-d" . 'hungry-delete-forward))
 (use-package doom-themes :ensure t)
 (use-package doom-modeline :ensure t)
-(use-package alchemist)
-
+(use-package alchemist :ensure t)
 
 
 ;;;;
@@ -90,7 +90,7 @@
 
 ;; Langauage-specific
 ;; Requires companion setup file in .emacs.d/customizations
-(defvar langs '("clojure" "python" "haskell" "js"))
+(defvar langs '("clojure" "python" "haskell" "js" "elixir"))
 (dolist (l langs)
   (load (concat "setup-" l ".el")))
 (custom-set-variables
@@ -106,7 +106,7 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (emojify unicode-fonts blacken alchemist doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
+    (alchemist emojify unicode-fonts blacken doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
