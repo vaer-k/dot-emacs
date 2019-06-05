@@ -10,5 +10,3 @@
      (tagedit-add-paredit-like-keybindings)
      (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
 
-;; JSX
-(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))

@@ -44,7 +44,6 @@
 (use-package py-autopep8 :ensure t)
 (use-package blacken :ensure t)
 (use-package haskell-mode :ensure t)
-(use-package rjsx-mode :ensure t)
 (use-package ensime :ensure t)                          
 (use-package iedit :ensure t)                           
 (use-package ivy :ensure t)                             
