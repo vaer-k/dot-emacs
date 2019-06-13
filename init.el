@@ -61,6 +61,7 @@
 (use-package doom-themes :ensure t)
 (use-package doom-modeline :ensure t)
 (use-package alchemist :ensure t)
+(use-package web-mode :ensure t)
 
 
 ;;;;
@@ -106,7 +107,7 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (alchemist emojify unicode-fonts blacken doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
+    (web-mode alchemist emojify unicode-fonts blacken doom-themes doom-modeline smooth-scrolling erc-hl-nicks hungry-delete magit which-key neotree counsel all-the-icons spacemacs-theme iedit ensime haskell-mode py-autopep8 flycheck elpy better-defaults tagedit rainbow-delimiters projectile cider clojure-mode-extra-font-locking clojure-mode paredit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
