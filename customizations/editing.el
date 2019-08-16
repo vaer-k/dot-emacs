@@ -1,5 +1,9 @@
 ;; Customizations relating to editing a buffer.
-(add-hook 'after-init-hook 'global-company-mode)
+
+;; global company-mode is usually activated by adding an after-init hook, but
+;; for reasons I don't understand I can't get it to work, so I just turn it on here
+;; (add-hook 'after-init-hook 'global-company-mode)
+(global-company-mode 1)
 
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
